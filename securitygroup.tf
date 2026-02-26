@@ -15,6 +15,7 @@ resource "aws_security_group" "web_sg" {
   vpc_id = aws_vpc.three_tier_vpc.id
 
   ingress {
+    description = "Allow HTTP from anywhere"
     from_port       = 80
     to_port         = 80
     protocol        = "tcp"
