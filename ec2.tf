@@ -3,6 +3,7 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
   subnet_id     = aws_subnet.public_1.id
   vpc_security_group_ids = [aws_security_group.web_sg.id]
+  key_name = "key4"
 
   user_data = <<EOF
 #!/bin/bash
