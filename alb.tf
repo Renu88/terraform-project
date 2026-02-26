@@ -1,5 +1,5 @@
 resource "aws_lb" "alb" {
-  name               = "three-tier-alb"
+  name               = "three-tier-alb-2"
   internal           = false
   load_balancer_type = "application"
   subnets            = [aws_subnet.public_1.id, aws_subnet.public_2.id]
@@ -7,7 +7,7 @@ resource "aws_lb" "alb" {
 }
 
 resource "aws_lb_target_group" "tg" {
-  name     = "web-tg"
+  name     = "web-tg-2"
   port     = 80
   protocol = "HTTP"
   vpc_id  = aws_vpc.three_tier_vpc.id
